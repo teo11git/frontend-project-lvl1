@@ -16,25 +16,25 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    #changed by me
     strategy:
       matrix:
         node-version: [14.x]
 
     steps:
       - uses: actions/checkout@v2
-
+      # changed by me
       - name: Use Node.js ${{ matrix.node-version }}
         uses: action/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-        
+          # changed by me  
       - name: npm install, build
         run: |
           make install
         env:
           CI: true
-
+      # changed by me
       - name: Run linter
         run: |
           make lint
