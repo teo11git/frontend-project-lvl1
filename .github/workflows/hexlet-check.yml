@@ -25,11 +25,11 @@ jobs:
       - uses: actions/checkout@v2
       # changed by me
       - name: Setup Node.js environment
-  uses: actions/setup-node@v2.1.4
-  with:
-    # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
-    node-version: ${{ matrix.node-version}}
-          # changed by me  
+        uses: actions/setup-node@v2.1.4
+        with:
+        # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
+          node-version: ${{ matrix.node-version}}
+      # changed by me  
       - name: npm install, build
         run: |
           make install
