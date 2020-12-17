@@ -1,7 +1,6 @@
 import askUser from './cli.js';
 
-const log = console.log
-;
+const { log } = console;
 const intervalForGenerator = {
   min: 0,
   max: 100,
@@ -18,13 +17,8 @@ const numGen = () => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-const isEven = (num) => {
-  return num % 2 === 0 ? true : false;
-};
+const isEven = (num) => num % 2 === 0;
 
-const isUserInputCorrect = (value) => {
-
-};
 const game = async (name, num, counter) => {
   const rightAnswer = isEven(num) ? 'yes' : 'no';
   
@@ -36,16 +30,14 @@ const game = async (name, num, counter) => {
   log(`Question: ${num}`);
   const userAnswer = await askUser('Your answer: ', false);
   if (userAnswer === rightAnswer) {
-    await game(name, numGen(), counter -1);
+    await game(name, numGen(), counter - 1);
   } else {
     log(`${looserMessage}${name}!`);
-    return;
   }
 };
 
 export default async function isEvenGame() {
   const name = await askUser(undefined, false);
-  const { minValue, maxValue } = intervalForGenerator;
   const number = numGen();
   log(rules);
   await game(name, number, rightAnswerCount);  
