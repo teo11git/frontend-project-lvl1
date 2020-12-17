@@ -38,7 +38,7 @@ jobs:
       # changed by me
       - name: Run linter
         run: |
-          make lint
+          make lint -i
 
       - name: Hexlet project check
         uses: hexlet/project-action@release
