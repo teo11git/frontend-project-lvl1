@@ -1,0 +1,31 @@
+name: linter-check
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    #changed by me
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.4
+        with:
+        # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
+          node-version: ${{ matrix.node-version}}
+      - name: npm install, build
+        run: |
+          make install
+        env:
+          CI: true
+
+      - name: Run linter
+        run: |
+          make lint -i
