@@ -7,7 +7,8 @@ const intervalForGenerator = {
 };
 const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
 const rightAnswerCount = 3;
-const looserMessage = 'Let\'s try again, ';
+const errorMessage = ' is wrong answer ;( Correct answer was '.
+const endMessage= 'Let\'s try again, ';
 const winnerMessage = 'Congratulations, ';
 
 const numGen = () => {
@@ -32,6 +33,7 @@ const game = async (name, num, counter) => {
   if (userAnswer === rightAnswer) {
     await game(name, numGen(), counter - 1);
   } else {
+    log(`${userAnswer}${errorMessage}${rightAnswer}.`);
     log(`${looserMessage}${name}!`);
   }
 };

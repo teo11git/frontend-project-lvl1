@@ -9,11 +9,11 @@ const asyncQuestion = (data) => new Promise((resolve) => rl.question(data, resol
 
 const greetings = 'May i have your name? ';
 
-export default async function (query = greetings) {
+export default async function(query = greetings) {
   const value = await asyncQuestion(query);
-
+  
   if (query === greetings) {
-    console.log(`Hello, ${value}!`);
+    console.log('Hello, ${value}!');
   }
   return new Promise((resolve) => resolve(value));
 }
