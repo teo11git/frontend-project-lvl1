@@ -7,7 +7,7 @@ const endMessage= 'Let\'s try again, ';
 const winnerMessage = 'Congratulations, ';
 
 
-export default async function round(name, gameGen, counter) => {
+export default async function(name, gameGen, counter) => {
   const [ quest, rightAnswer ] = gameGen();
   
   if (counter === 0) {
