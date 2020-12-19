@@ -7,10 +7,11 @@ import randomNum from './tools/randomGen.js';
 
 const roundCount = 3;
 
-export default (async function(gameName) {
+export default async function(gameName) {
 const map = {
   brainEven: EvenGame,
 };
+  console.log('Welcome to the Brain Games!')
   const name = await askUser();
-  round(name, map[gameName], roundCount);
-})('brainEven');
+  await round(name, map[gameName], roundCount);
+}
