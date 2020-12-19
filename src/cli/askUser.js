@@ -13,7 +13,7 @@ export default async function(query = greetings) {
   const value = await asyncQuestion(query);
   
   if (query === greetings) {
-    console.log('Hello, ${value}!');
+    console.log(`Hello, ${value}!`);
   }
   return new Promise((resolve) => resolve(value));
 }

@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 
-import greetings from '../src/cli.js';
+import askName from '../src/cli/askUser.js';
 
+(async function() {
 console.log('Welcome to Brain Games!');
-greetings();
+await askName();
+process.exit(0);
+})();
