@@ -18,7 +18,8 @@ export default async function game(name, gameGen, counter) {
 
   log(`Question: ${quest}`);
   const userAnswer = await askUser('Your answer: ');
-  if (userAnswer === rightAnswer) {
+  if (userAnswer === String(rightAnswer)) {
+    log('Correct!');
     await game(name, gameGen, counter - 1);
   } else {
     log(`${userAnswer}${errorMessage}${rightAnswer}.`);

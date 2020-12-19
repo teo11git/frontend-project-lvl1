@@ -1,5 +1,5 @@
 import script from '../index.js';
 
 export default async function() {
-  script('brainEven');
+  script('brainCalc');
 }
