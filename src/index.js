@@ -3,6 +3,7 @@ import round from './cli/round.js';
 
 import EvenGame from './taskGenerators/isEvenTask.js';
 import calcGame from './taskGenerators/calcTask.js';
+import gcdGame from './taskGenerators/gcdTask.js';
 
 import randomNum from './tools/randomGen.js';
 
@@ -12,6 +13,7 @@ export default async function(gameName) {
 const map = {
   brainEven: EvenGame,
   brainCalc: calcGame,
+  brainGCD: gcdGame
 };
   console.log('Welcome to the Brain Games!')
   const name = await askUser();
