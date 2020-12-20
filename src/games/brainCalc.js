@@ -2,6 +2,8 @@ import script from '../index.js';
 
 import randomNum from '../tools/randomGen.js';
 
+const rule = 'What is the result of the expression?';
+
 const calcTask = () => {
   const mathFunctions = [
     (a, b) => a + b,
@@ -29,10 +31,10 @@ const calcTask = () => {
       break;
   }
   const result = [task, answer];
-  console.log(result);
+  // console.log(result);
   return result;
 };
 
 export default async () => {
-  await script(calcTask);
+  await script(calcTask, rule);
 }

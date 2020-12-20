@@ -2,6 +2,8 @@ import script from '../index.js';
 
 import randomNum from '../tools/randomGen.js';
 
+const rule = 'What number is missing in the progression?';
+
 const progressionsTask = () => {
   const term = randomNum({ min: 1, max: 50 });
   const progLength = randomNum({ min: 5, max: 10 });
@@ -19,10 +21,10 @@ const progressionsTask = () => {
   const answer = String(progression[hiddenElement]);
   progression[hiddenElement] = '..';
   const task = (progression).join(' ');
-  console.log(`task = ${task}, answer = ${answer}`); // !!!
+  //console.log(`task = ${task}, answer = ${answer}`); // !!!
   return [task, answer];
 };
 
 export default async () => {
-  await script(progressionsTask);
+  await script(progressionsTask, rule);
 }

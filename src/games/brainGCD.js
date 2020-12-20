@@ -2,6 +2,8 @@ import script from '../index.js';
 
 import randomNum from '../tools/randomGen.js';
 
+const rule = 'Find the greatest common divisor of given numbers.';
+
 const findGCD = (x, y) => {
   const lowerValue = x < y ? x : y;
 
@@ -15,7 +17,6 @@ const findGCD = (x, y) => {
     return recursiveFinder(a, b, i - 1);
   };
   const result = recursiveFinder(x, y, lowerValue);
-  console.log(result);
   return result;
 };
 
@@ -25,10 +26,10 @@ const gcdTask = () => {
   const answer = findGCD(num1, num2);
   const task = `${num1} ${num2}`;
   const result = [task, String(answer)];
-  console.log(result);
+  // console.log(result);
   return result;
 };
 
 export default async () => {
-  await script(gcdTask);
+  await script(gcdTask, rule);
 }
