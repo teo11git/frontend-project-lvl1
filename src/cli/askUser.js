@@ -9,9 +9,8 @@ const asyncQuestion = (data) => new Promise((resolve) => rl.question(data, resol
 
 const greetings = 'May i have your name? ';
 
-export default async function(query = greetings) {
+export default async (query = greetings) => {
   const value = await asyncQuestion(query);
-  
   if (query === greetings) {
     console.log(`Hello, ${value}!`);
   }

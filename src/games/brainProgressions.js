@@ -13,7 +13,7 @@ const progressionsTask = () => {
       return acc;
     }
     return progGen(num + term, index - 1, [...acc, num]);
-  }
+  };
 
   const progression = progGen(startNum, progLength, []);
   const answer = String(progression[hiddenElement]);
@@ -23,6 +23,6 @@ const progressionsTask = () => {
   return [task, answer];
 };
 
-export default async function() {
+export default async () => {
   await script(progressionsTask);
 }

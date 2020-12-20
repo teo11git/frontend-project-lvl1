@@ -2,7 +2,7 @@
 
 import game from '../src/games/brainEven.js';
 
-(async function() {
+(async () => {
   await game();
   process.exit(0);
 })();

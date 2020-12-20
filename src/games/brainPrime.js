@@ -28,4 +28,4 @@ const primeTask = () => {
 
 export default async () => {
   await script(primeTask);
-}
+};

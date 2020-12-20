@@ -10,6 +10,6 @@ const evenTask = () => {
 
 evenTask();
 
-export default async function() {
+export default async () => {
   await script(evenTask);
 }
