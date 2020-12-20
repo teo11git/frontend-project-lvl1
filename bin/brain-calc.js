@@ -2,7 +2,7 @@
 
 import game from '../src/games/brainCalc.js';
 
-(async function() {
+(async function () {
   await game();
   process.exit(0);
 })();
