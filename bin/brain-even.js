@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import gameScript from '../src/index.js';
+import game from '../src/games/brainEven.js';
 
 (async function() {
-  await gameScript('brainEven');
+  await game();
   process.exit(0);
 })();
