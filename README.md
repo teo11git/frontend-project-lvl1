@@ -4,4 +4,4 @@
 ### Linter tests
 [![linter-check](https://github.com/teo11git/frontend-project-lvl1/workflows/linter-check/badge.svg)](https://github.com/teo11git/frontend-project-lvl1/actions)
 ### Usage Examples
-[![asciicast](https://asciinema.org/a/380259.svg)](https://asciinema.org/a/380259)
+<a href="https://asciinema.org/a/380261" target="_blank"><img src="https://asciinema.org/a/380261.svg" /></a>
