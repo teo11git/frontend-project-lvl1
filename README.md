@@ -1,6 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/teo11git/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/teo11git/frontend-project-lvl1/actions)
-### 
+### CodeClimate
 [![Maintainability](https://api.codeclimate.com/v1/badges/722cb72d1b30eff7942a/maintainability)](https://codeclimate.com/github/teo11git/frontend-project-lvl1/maintainability)
 ### Linter tests
 [![linter-check](https://github.com/teo11git/frontend-project-lvl1/workflows/linter-check/badge.svg)](https://github.com/teo11git/frontend-project-lvl1/actions)
