@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import game from '../src/games/brainEven.js';
+import game from '../src/games/even-number.js';
 
 (async () => {
   await game();

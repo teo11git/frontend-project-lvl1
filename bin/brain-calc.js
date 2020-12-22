@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import game from '../src/games/brainCalc.js';
+import game from '../src/games/calc.js';
 
 (async () => {
   await game();

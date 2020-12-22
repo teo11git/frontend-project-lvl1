@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import game from '../src/games/brainProgressions.js';
+import game from '../src/games/progression.js';
 
 (async () => {
   await game();

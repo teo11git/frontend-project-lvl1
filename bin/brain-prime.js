@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import game from '../src/games/brainPrime.js';
+import game from '../src/games/prime-number.js';
 
 (async () => {
   await game();
