@@ -1,4 +1,4 @@
-import askUser from './askUser.js';
+import askUser from './ask-user.js';
 
 const errorMessage = ' is wrong answer ;( Correct answer was ';
 const endMessage = 'Let\'s try again, ';

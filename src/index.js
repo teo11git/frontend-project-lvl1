@@ -1,4 +1,4 @@
-import askUser from './cli/askUser.js';
+import askUser from './cli/ask-user.js';
 import round from './cli/round.js';
 
 const roundCount = 3;
