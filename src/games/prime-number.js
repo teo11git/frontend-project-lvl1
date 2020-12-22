@@ -1,6 +1,6 @@
 import script from '../index.js';
 
-import randomNum from '../tools/randomGen.js';
+import randomNum from '../tools/random-gen.js';
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 

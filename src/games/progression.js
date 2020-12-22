@@ -1,6 +1,6 @@
 import script from '../index.js';
 
-import randomNum from '../tools/randomGen.js';
+import randomNum from '../tools/random-gen.js';
 
 const rule = 'What number is missing in the progression?';
 

@@ -1,6 +1,6 @@
 import script from '../index.js';
 
-import randomNum from '../tools/randomGen.js';
+import randomNum from '../tools/random-gen.js';
 
 const rule = 'Find the greatest common divisor of given numbers.';
 
