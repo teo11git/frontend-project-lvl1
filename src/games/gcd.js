@@ -26,7 +26,6 @@ const gcdTask = () => {
   const answer = findGCD(num1, num2);
   const task = `${num1} ${num2}`;
   const result = [task, String(answer)];
-  // console.log(result);
   return result;
 };
 

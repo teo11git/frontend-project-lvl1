@@ -24,7 +24,6 @@ const primeTask = () => {
   const currentNumber = numbers[currentIndex];
   const answer = isPrime(currentNumber, 2) ? 'yes' : 'no';
   const task = String(currentNumber);
-  // console.log(`task=${task}, answer=${answer}`);
   return [task, answer];
 };
 

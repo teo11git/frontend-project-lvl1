@@ -20,7 +20,6 @@ const progressionsTask = () => {
   const answer = String(progression[hiddenElement]);
   progression[hiddenElement] = '..';
   const task = (progression).join(' ');
-  // console.log(`task = ${task}, answer = ${answer}`); // !!!
   return [task, answer];
 };
 
