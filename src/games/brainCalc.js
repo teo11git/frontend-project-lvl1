@@ -30,7 +30,7 @@ const calcTask = () => {
       answer = mathFunctions[currentFnIndex](num1, num2);
       break;
     default:
-      console.log("BOOM from round.js");
+      console.log('BOOM from round.js');
   }
   const result = [task, answer];
   // console.log(result);

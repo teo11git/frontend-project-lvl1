@@ -8,7 +8,7 @@ const progressionsTask = () => {
   const term = randomNum({ min: 1, max: 50 });
   const progLength = randomNum({ min: 5, max: 10 });
   const startNum = randomNum({ min: 0, max: 100 });
-  const hiddenElement = randomNum({ min: 0, max: progLength - 1 });  
+  const hiddenElement = randomNum({ min: 0, max: progLength - 1 });
   const progGen = (num, index, acc) => {
     if (index === 0) {
       return acc;
