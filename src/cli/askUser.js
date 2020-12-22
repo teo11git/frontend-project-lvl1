@@ -15,4 +15,4 @@ export default async (query = greetings) => {
     console.log(`Hello, ${value}!`);
   }
   return new Promise((resolve) => resolve(value));
-}
+};

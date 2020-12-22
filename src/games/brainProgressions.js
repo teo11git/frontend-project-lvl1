@@ -9,7 +9,6 @@ const progressionsTask = () => {
   const progLength = randomNum({ min: 5, max: 10 });
   const startNum = randomNum({ min: 0, max: 100 });
   const hiddenElement = randomNum({ min: 0, max: progLength - 1 });  
-
   const progGen = (num, index, acc) => {
     if (index === 0) {
       return acc;
@@ -21,10 +20,10 @@ const progressionsTask = () => {
   const answer = String(progression[hiddenElement]);
   progression[hiddenElement] = '..';
   const task = (progression).join(' ');
-  //console.log(`task = ${task}, answer = ${answer}`); // !!!
+  // console.log(`task = ${task}, answer = ${answer}`); // !!!
   return [task, answer];
 };
 
 export default async () => {
   await script(progressionsTask, rule);
-}
+};

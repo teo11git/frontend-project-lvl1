@@ -8,7 +8,6 @@ const { log } = console;
 
 export default async function game(name, gameGen, counter) {
   const [quest, rightAnswer] = gameGen();
-  
   if (counter === 0) {
     log(`${winnerMessage}${name}!`);
     return;

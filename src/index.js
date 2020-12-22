@@ -8,4 +8,4 @@ export default async (gameFn, rules) => {
   const name = await askUser();
   console.log(rules);
   await round(name, gameFn, roundCount);
-}
+};

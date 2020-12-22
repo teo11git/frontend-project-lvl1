@@ -14,4 +14,4 @@ evenTask();
 
 export default async () => {
   await script(evenTask, rule);
-}
+};

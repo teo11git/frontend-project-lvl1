@@ -32,4 +32,4 @@ const gcdTask = () => {
 
 export default async () => {
   await script(gcdTask, rule);
-}
+};
