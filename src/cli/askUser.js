@@ -7,7 +7,7 @@ const rl = readline.createInterface({
 
 const asyncQuestion = (data) => new Promise((resolve) => rl.question(data, resolve));
 
-const greetings = 'May i have your name? ';
+const greetings = 'May I have your name? ';
 
 export default async (query = greetings) => {
   const value = await asyncQuestion(query);
