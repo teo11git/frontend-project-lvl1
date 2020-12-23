@@ -21,8 +21,8 @@ const findGCD = (x, y) => {
 };
 
 const gcdTask = () => {
-  const num1 = randomNum({ min: 1, max: 100 });
-  const num2 = randomNum({ min: 1, max: 100 });
+  const num1 = randomNum(1, 100);
+  const num2 = randomNum(1, 100);
   const answer = findGCD(num1, num2);
   const task = `${num1} ${num2}`;
   const result = [task, String(answer)];

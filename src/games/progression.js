@@ -5,10 +5,10 @@ import randomNum from '../tools/random-gen.js';
 const rule = 'What number is missing in the progression?';
 
 const progressionsTask = () => {
-  const term = randomNum({ min: 1, max: 50 });
-  const progLength = randomNum({ min: 5, max: 10 });
-  const startNum = randomNum({ min: 0, max: 100 });
-  const hiddenElement = randomNum({ min: 0, max: progLength - 1 });
+  const term = randomNum(1, 50);
+  const progLength = randomNum(5, 10);
+  const startNum = randomNum(0, 100);
+  const hiddenElement = randomNum(0, progLength - 1);
   const progGen = (num, index, acc) => {
     if (index === 0) {
       return acc;
