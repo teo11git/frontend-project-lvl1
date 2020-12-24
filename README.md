@@ -5,7 +5,28 @@
 ### Linter tests
 [![linter-check](https://github.com/teo11git/frontend-project-lvl1/workflows/linter-check/badge.svg)](https://github.com/teo11git/frontend-project-lvl1/actions)
 ### Installation
-`git clone https://github.com/teo11git/frontend-project-lvl1.git`
+```
+git clone https://github.com/teo11git/frontend-project-lvl1.git
+cd frontend-project-lvl1
+make publish
+npm link
+```
+Then you choose and run following games:
+1. "Brain Games" - simple greetings.
+2. "Brain Even" - try to guess, is number even or not.
+3. "Brain Calc" - calculate a simple arithmetic problem.
+4. "Brain gcd" - find greatest common divisor.
+5. "Brain Progression" - find the missing link of arithmetic progression.
+6. "Brain Prime" - try to guess, is number simple or not.
+You can run the games, just type:
+```
+brain-games
+brain-even
+brain-calc
+brain-gcd
+brain-progression
+brain-prime
+```
 ### Usage Examples
 <a href="https://asciinema.org/a/380261" target="_blank"><img src="https://asciinema.org/a/380261.svg" /></a>
 ### brain-even
