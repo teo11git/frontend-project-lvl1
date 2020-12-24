@@ -13,11 +13,11 @@ npm link
 ```
 Then you choose and run following games:
 1. "Brain Games" - simple greetings.
-2. "Brain Even" - try to guess, is number even or not.
+2. "Brain Even" - try to guess, if the number is even or not.
 3. "Brain Calc" - calculate a simple arithmetic problem.
 4. "Brain gcd" - find the greatest common divisor.
 5. "Brain Progression" - find the missing link of arithmetic progression.
-6. "Brain Prime" - try to guess, is number simple or not.
+6. "Brain Prime" - try to guess, if the number is simple or not.
 You can run the games, just type:
 ```
 brain-games
