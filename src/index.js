@@ -14,7 +14,7 @@ export default async (makeQuestion, rules) => {
     const [quest, rightAnswer] = makeQuestion();
     log(`Question: ${quest}`);
     const userAnswer = await askUser('Your answer: ');
-    if (userAnswer === String(rightAnswer)) {
+    if (userAnswer === rightAnswer) {
       log('Correct!');
       await startGame(roundCount - 1);
     } else {

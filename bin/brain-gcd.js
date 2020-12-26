@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import game from '../src/games/gcd.js';
+import startGame from '../src/games/gcd.js';
 
 (async () => {
-  await game();
+  await startGame();
   process.exit(0);
 })();

@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import game from '../src/games/prime-number.js';
+import startGame from '../src/games/prime-number.js';
 
 (async () => {
-  await game();
+  await startGame();
   process.exit(0);
 })();

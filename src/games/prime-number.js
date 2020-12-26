@@ -1,10 +1,10 @@
-import script from '../index.js';
+import runScript from '../index.js';
 
-import randomNum from '../tools/random-gen.js';
+import getRandomNum from '../tools/random-gen.js';
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const isPrime = (num, i) => {
+const checkPrime = (num, i = 2) => {
   if (num === 1) {
     return false;
   }
@@ -14,19 +14,19 @@ const isPrime = (num, i) => {
   if (num % i === 0) {
     return false;
   }
-  return isPrime(num, i + 1);
+  return checkPrime(num, i + 1);
 };
 
-const primeTask = () => {
+const makePrimeTask = () => {
   const numbers = [1, 2, 13, 21, 41, 56, 67, 77, 79, 85,
     97, 111, 127, 132, 149, 152, 163, 164, 173, 199];
-  const currentIndex = randomNum(0, numbers.length - 1);
+  const currentIndex = getRandomNum(0, numbers.length - 1);
   const currentNumber = numbers[currentIndex];
-  const answer = isPrime(currentNumber, 2) ? 'yes' : 'no';
-  const task = String(currentNumber);
+  const answer = checkPrime(currentNumber) ? 'yes' : 'no';
+  const task = currentNumber;
   return [task, answer];
 };
 
 export default async () => {
-  await script(primeTask, rule);
+  await runScript(makePrimeTask, rule);
 };

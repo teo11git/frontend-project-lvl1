@@ -1,26 +1,24 @@
-import { cons, car, cdr } from '@hexlet/pairs';
+import runScript from '../index.js';
 
-import script from '../index.js';
-
-import randomNum from '../tools/random-gen.js';
+import getRandomNum from '../tools/random-gen.js';
 
 const rule = 'What is the result of the expression?';
 
-const calcTask = () => {
+const makeCalcTask = () => {
   const mathFunctions = [
-    (a, b) => cons(a + b, `${a} + ${b}`),
-    (a, b) => cons(a - b, `${a} - ${b}`),
-    (a, b) => cons(a * b, `${a} * ${b}`),
+    (a, b) => [a + b, `${a} + ${b}`],
+    (a, b) => [a - b, `${a} - ${b}`],
+    (a, b) => [a * b, `${a} * ${b}`],
   ];
 
-  const currentFnIndex = randomNum(0, 2);
-  const num1 = randomNum(0, 25);
-  const num2 = randomNum(0, 25);
-  const task = cdr(mathFunctions[currentFnIndex](num1, num2));
-  const answer = String(car(mathFunctions[currentFnIndex](num1, num2)));
+  const currentFnIndex = getRandomNum(0, 2);
+  const num1 = getRandomNum(0, 25);
+  const num2 = getRandomNum(0, 25);
+  const task = mathFunctions[currentFnIndex](num1, num2)[1];
+  const answer = String(mathFunctions[currentFnIndex](num1, num2)[0]);
   return [task, answer];
 };
 
 export default async () => {
-  await script(calcTask, rule);
+  await runScript(makeCalcTask, rule);
 };
