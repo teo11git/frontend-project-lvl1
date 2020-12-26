@@ -1,20 +1,14 @@
 import askUser from './cli/ask-user.js';
 
-const errorMessage = ' is wrong answer ;( Correct answer was ';
-const endMessage = 'Let\'s try again, ';
-const winnerMessage = 'Congratulations, ';
-
-const roundCount = 3;
-
 const { log } = console;
 
 export default async (makeQuestion, rules) => {
   log('Welcome to the Brain Games!');
   const name = await askUser();
   log(`${rules}`);
-  const startGame = async (counter) => {
-    if (counter === 0) {
-      log(`${winnerMessage}${name}`);
+  const startGame = async (roundCount = 3) => {
+    if (roundCount === 0) {
+      log(`Congratulations, ${name}!`);
       return;
     }
     const [quest, rightAnswer] = makeQuestion();
@@ -22,11 +16,11 @@ export default async (makeQuestion, rules) => {
     const userAnswer = await askUser('Your answer: ');
     if (userAnswer === String(rightAnswer)) {
       log('Correct!');
-      await startGame(counter - 1);
+      await startGame(roundCount - 1);
     } else {
-      log(`${userAnswer}${errorMessage}${rightAnswer}.`);
-      log(`${endMessage}${name}!`);
+      log(`'${userAnswer}' is wrong answer ;( Correct answer was '${rightAnswer}'.`);
+      log(`Let\'s try again, ${name}!`);
     }
   };
-  await startGame(roundCount);
+  await startGame();
 };
