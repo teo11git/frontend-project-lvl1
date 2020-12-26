@@ -1,4 +1,4 @@
-import script from '../index.js';
+import makeScript from '../index.js';
 
 import randomNum from '../tools/random-gen.js';
 
@@ -13,5 +13,5 @@ const evenTask = () => {
 evenTask();
 
 export default async () => {
-  await script(evenTask, rule);
+  await makeScript(evenTask, rule);
 };
