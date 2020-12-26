@@ -14,5 +14,5 @@ export default async (query = greetings) => {
   if (query === greetings) {
     console.log(`Hello, ${value}!`);
   }
-  return new Promise((resolve) => resolve(value));
+  return value;
 };
