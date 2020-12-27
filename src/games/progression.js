@@ -14,7 +14,7 @@ const makeProgressionTask = () => {
       return;
     }
     progression.push(num);
-    return startProgGen(num + t, term, index - 1);
+    return startProgGen(num + term, term, index - 1);
   };
 
   startProgGen(startNum, getRandomNum(1, 50), progLength);

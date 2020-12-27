@@ -18,10 +18,10 @@ const checkPrime = (num, i = 2) => {
 };
 
 const makePrimeTask = () => {
-  const numbers = [1, 2, 13, 21, 41, 56, 67, 77, 79, 85,
+  const numbersForTasks = [1, 2, 13, 21, 41, 56, 67, 77, 79, 85,
     97, 111, 127, 132, 149, 152, 163, 164, 173, 199];
-  const currentIndex = getRandomNum(0, numbers.length - 1);
-  const currentNumber = numbers[currentIndex];
+  const currentIndex = getRandomNum(0, numbersForTasks.length - 1);
+  const currentNumber = numbersForTasks[currentIndex];
   const answer = checkPrime(currentNumber) ? 'yes' : 'no';
   const task = currentNumber;
   return [task, answer];
