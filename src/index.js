@@ -19,7 +19,7 @@ export default async (makeQuestion, rules) => {
       await startGame(roundCount - 1);
     } else {
       log(`'${userAnswer}' is wrong answer ;( Correct answer was '${rightAnswer}'.`);
-      log(`Let\'s try again, ${name}!`);
+      log(`Let's try again, ${name}!`);
     }
   };
   await startGame();
