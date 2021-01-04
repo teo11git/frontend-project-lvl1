@@ -12,7 +12,6 @@ const makeProgressionTask = () => {
     if (index === 0) {
       return [];
     }
-    // progression.push(num);
     return [num, ...startProgGen(num + term, term, index - 1)];
   };
 
