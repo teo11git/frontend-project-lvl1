@@ -8,19 +8,18 @@ const makeProgressionTask = () => {
   const progLength = getRandomNum(5, 10);
   const startNum = getRandomNum(0, 100);
   const hiddenElement = getRandomNum(0, progLength - 1);
-  const progression = [];
   const startProgGen = (num, term, index) => {
     if (index === 0) {
-      return;
+      return [];
     }
-    progression.push(num);
-    return startProgGen(num + term, term, index - 1);
+    // progression.push(num);
+    return [num, ...startProgGen(num + term, term, index - 1)];
   };
 
-  startProgGen(startNum, getRandomNum(1, 50), progLength);
+  const progression = startProgGen(startNum, getRandomNum(1, 50), progLength);
   const answer = String(progression[hiddenElement]);
   progression[hiddenElement] = '..';
-  const task = (progression).join(' ');
+  const task = progression.join(' ');
   return [task, answer];
 };
 
