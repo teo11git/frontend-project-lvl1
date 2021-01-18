@@ -4,7 +4,7 @@ import getRandomNum from '../tools/random-gen.js';
 
 const rule = 'What is the result of the expression?';
 
-const makeCalcTask = () => {
+const makeRoundData = () => {
   const mathFunctions = [
     (a, b) => [a + b, `${a} + ${b}`],
     (a, b) => [a - b, `${a} - ${b}`],
@@ -20,5 +20,5 @@ const makeCalcTask = () => {
 };
 
 export default async () => {
-  await runScript(makeCalcTask, rule);
+  await runScript(makeRoundData, rule);
 };

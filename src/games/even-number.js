@@ -1,15 +1,17 @@
-import makeScript from '../index.js';
+import runScript from '../index.js';
 
 import getRandomNum from '../tools/random-gen.js';
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const makeEvenTask = () => {
+const isEven = (num) => num % 2 === 0;
+
+const makeRoundData = () => {
   const task = getRandomNum(0, 100);
-  const answer = task % 2 === 0 ? 'yes' : 'no';
+  const answer = isEven(task) ? 'yes' : 'no';
   return [task, answer];
 };
 
 export default async () => {
-  await makeScript(makeEvenTask, rule);
+  await runScript(makeRoundData, rule);
 };

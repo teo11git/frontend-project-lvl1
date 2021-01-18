@@ -18,7 +18,7 @@ const checkPrime = (num) => {
   return true;
 };
 
-const makePrimeTask = () => {
+const makeRoundData = () => {
   const currentIndex = getRandomNum(0, numbersForTasks.length - 1);
   const currentNumber = numbersForTasks[currentIndex];
   const answer = checkPrime(currentNumber) ? 'yes' : 'no';
@@ -27,5 +27,5 @@ const makePrimeTask = () => {
 };
 
 export default async () => {
-  await runScript(makePrimeTask, rule);
+  await runScript(makeRoundData, rule);
 };

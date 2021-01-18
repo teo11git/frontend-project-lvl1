@@ -2,14 +2,14 @@ import askUser from './cli/ask-user.js';
 
 const { log } = console;
 
-export default async (makeQuestion, rules) => {
+export default async (makeRoundData, rules) => {
   log('Welcome to the Brain Games!');
   const name = await askUser();
   log(rules);
   let roundCount = 3;
 
   while (roundCount !== 0) {
-    const [quest, rightAnswer] = makeQuestion();
+    const [quest, rightAnswer] = makeRoundData();
     log(`Question: ${quest}`);
     const userAnswer = await askUser('Your answer: ');
     if (userAnswer !== rightAnswer) {

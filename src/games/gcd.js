@@ -10,7 +10,7 @@ const getGcd = (a, b) => {
   }
   return getGcd(b, a % b);
 };
-const makeGcdTask = () => {
+const makeRoundData = () => {
   const num1 = getRandomNum(1, 100);
   const num2 = getRandomNum(1, 100);
   const answer = String(getGcd(num1, num2));
@@ -19,5 +19,5 @@ const makeGcdTask = () => {
 };
 
 export default async () => {
-  await runScript(makeGcdTask, rule);
+  await runScript(makeRoundData, rule);
 };

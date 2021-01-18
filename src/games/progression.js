@@ -4,7 +4,7 @@ import getRandomNum from '../tools/random-gen.js';
 
 const rule = 'What number is missing in the progression?';
 
-const makeProgressionTask = () => {
+const makeRoundData = () => {
   const progLength = getRandomNum(5, 10);
   const startNum = getRandomNum(0, 100);
   const hiddenElement = getRandomNum(0, progLength - 1);
@@ -23,5 +23,5 @@ const makeProgressionTask = () => {
 };
 
 export default async () => {
-  await runScript(makeProgressionTask, rule);
+  await runScript(makeRoundData, rule);
 };
