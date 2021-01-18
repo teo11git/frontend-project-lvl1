@@ -10,7 +10,6 @@ const makeProgression = (firstNum, term, progressionLength) => {
   return [firstNum, ...makeProgression(firstNum + term, term, progressionLength - 1)];
 };
 
-
 const makeRoundData = () => {
   const progLength = getRandomNum(5, 10);
   const startNum = getRandomNum(0, 100);
