@@ -1,13 +1,6 @@
-import readline from 'readline';
+import readline from 'readline-sync';
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
-const asyncQuestion = (data) => new Promise((resolve) => rl.question(data, resolve));
-
-export default async (query = 'May I have your name? ') => {
-  const value = await asyncQuestion(query);
+export default (query = 'May I have your name? ') => {
+  const value = readline.question(query);
   return value;
 };

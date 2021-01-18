@@ -18,6 +18,6 @@ const makeRoundData = () => {
   return [question, answer];
 };
 
-export default async () => {
-  await runScript(makeRoundData, rule);
+export default () => {
+  runScript(makeRoundData, rule);
 };
