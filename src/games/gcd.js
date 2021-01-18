@@ -14,8 +14,8 @@ const makeRoundData = () => {
   const num1 = getRandomNum(1, 100);
   const num2 = getRandomNum(1, 100);
   const answer = String(getGcd(num1, num2));
-  const task = `${num1} ${num2}`;
-  return [task, answer];
+  const question = `${num1} ${num2}`;
+  return [question, answer];
 };
 
 export default async () => {

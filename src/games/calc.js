@@ -4,19 +4,18 @@ import getRandomNum from '../tools/random-gen.js';
 
 const rule = 'What is the result of the expression?';
 
-const makeRoundData = () => {
-  const mathFunctions = [
-    (a, b) => [a + b, `${a} + ${b}`],
-    (a, b) => [a - b, `${a} - ${b}`],
-    (a, b) => [a * b, `${a} * ${b}`],
-  ];
+const mathFunctions = [
+  (a, b) => [a + b, `${a} + ${b}`],
+  (a, b) => [a - b, `${a} - ${b}`],
+  (a, b) => [a * b, `${a} * ${b}`],
+];
 
-  const currentFnIndex = getRandomNum(0, 2);
+const makeRoundData = () => {
+  const currentFnIndex = getRandomNum(0, mathFunctions.length - 1);
   const num1 = getRandomNum(0, 25);
   const num2 = getRandomNum(0, 25);
-  const task = mathFunctions[currentFnIndex](num1, num2)[1];
-  const answer = String(mathFunctions[currentFnIndex](num1, num2)[0]);
-  return [task, answer];
+  const [answer, question] = mathFunctions[currentFnIndex](num1, num2);
+  return [question, String(answer)];
 };
 
 export default async () => {

@@ -9,8 +9,8 @@ export default async (makeRoundData, rules) => {
   let roundCount = 3;
 
   while (roundCount !== 0) {
-    const [quest, rightAnswer] = makeRoundData();
-    log(`Question: ${quest}`);
+    const [question, rightAnswer] = makeRoundData();
+    log(`Question: ${question}`);
     const userAnswer = await askUser('Your answer: ');
     if (userAnswer !== rightAnswer) {
       log(`'${userAnswer}' is wrong answer ;( Correct answer was '${rightAnswer}'.`);

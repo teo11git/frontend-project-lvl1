@@ -22,8 +22,8 @@ const makeRoundData = () => {
   const currentIndex = getRandomNum(0, numbersForTasks.length - 1);
   const currentNumber = numbersForTasks[currentIndex];
   const answer = checkPrime(currentNumber) ? 'yes' : 'no';
-  const task = currentNumber;
-  return [task, answer];
+  const question = currentNumber;
+  return [question, answer];
 };
 
 export default async () => {
