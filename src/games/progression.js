@@ -4,10 +4,15 @@ import getRandomNum from '../tools/random-gen.js';
 
 const rule = 'What number is missing in the progression?';
 const makeProgression = (firstNum, term, progressionLength) => {
-  if (progressionLength === 0) {
-    return [];
+  const progression = [firstNum];
+  let currentLength = 1;
+  let currentNum = firstNum;
+  while (currentLength < progressionLength) {
+    currentNum = currentNum + term;
+    progression.push(currentNum);
+    currentLength += 1;
   }
-  return [firstNum, ...makeProgression(firstNum + term, term, progressionLength - 1)];
+  return progression;
 };
 
 const makeRoundData = () => {
