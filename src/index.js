@@ -1,10 +1,10 @@
-import askUser from './cli/ask-user.js';
+import askUser from './tools/ask-user.js';
 
 const { log } = console;
 
 export default (makeRoundData, rules) => {
   log('Welcome to the Brain Games!');
-  const name = askUser();
+  const name = askUser('May I have your name? ');
   log(rules);
   let roundCount = 3;
 
