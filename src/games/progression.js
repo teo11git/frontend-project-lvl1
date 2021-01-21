@@ -9,7 +9,7 @@ const makeProgression = (firstNum, term, progressionLength) => {
   let currentNum = firstNum;
   while (currentLength < progressionLength) {
     progression.push(currentNum);
-    currentNum = currentNum + term;
+    currentNum += term;
     currentLength += 1;
   }
   return progression;
