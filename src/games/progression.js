@@ -4,7 +4,6 @@ import getRandomNum from '../tools/random-gen.js';
 
 const rule = 'What number is missing in the progression?';
 const makeProgression = (firstNum, term, progressionLength) => {
-  console.log(`<<< ${firstNum} -- ${term} -- ${progressionLength} >>>`)
   const progression = [];
   let currentLength = 0;
   let currentNum = firstNum;

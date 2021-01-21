@@ -1,5 +1,3 @@
 import readline from 'readline-sync';
 
-export default (query) => {
-  return readline.question(query);
-};
+export default (query) => readline.question(query);
